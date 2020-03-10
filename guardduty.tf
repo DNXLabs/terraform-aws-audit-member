@@ -8,7 +8,7 @@ data "aws_ssm_parameter" "account_email" {
 
 resource "aws_guardduty_detector" "member" {
   count    = var.guardduty ? 1 : 0
-  provider = "aws.account"
+  provider = aws.account
   enable   = true
 }
 
@@ -25,8 +25,8 @@ resource "aws_guardduty_member" "member" {
 resource "aws_guardduty_invite_accepter" "member" {
   count = var.guardduty ? 1 : 0
 
-  depends_on = ["aws_guardduty_member.member"]
-  provider   = "aws.account"
+  depends_on = [aws_guardduty_member.member]
+  provider   = aws.account
 
   detector_id       = aws_guardduty_detector.member[0].id
   master_account_id = data.aws_organizations_organization.selected.master_account_id
