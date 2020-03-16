@@ -1,8 +1,3 @@
-variable "guardduty" {
-  default     = true
-  description = "Enable/Disables guardduty"
-}
-
 variable "name" {
   type        = string
   description = "Name of this account"
@@ -15,4 +10,14 @@ variable "email" {
 
 variable "master_account_id" {
   description = "Master account ID"
+}
+
+variable "guardduty" {
+  default     = true
+  description = "Enable/Disables guardduty"
+}
+
+variable "guardduty_detector_id" {
+  default = ""
+  description = "GuardDuty detector ID"
 }
