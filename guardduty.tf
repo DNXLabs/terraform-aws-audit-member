@@ -25,5 +25,5 @@ resource "aws_guardduty_invite_accepter" "member" {
   provider   = aws.account
 
   detector_id       = aws_guardduty_detector.member[0].id
-  master_account_id = data.aws_organizations_organization.selected.master_account_id
+  master_account_id = var.master_account_id
 }

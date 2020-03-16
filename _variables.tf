@@ -12,3 +12,7 @@ variable "email" {
   type        = string
   description = "Email to be used in services like Guardduty"
 }
+
+variable "master_account_id" {
+  description = "Master account ID"
+}
