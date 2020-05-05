@@ -18,6 +18,5 @@ variable "guardduty" {
 }
 
 variable "guardduty_detector_id" {
-  default = ""
   description = "GuardDuty detector ID"
 }
