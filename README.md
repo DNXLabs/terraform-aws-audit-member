@@ -4,6 +4,33 @@
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-audit-member)](https://github.com/DNXLabs/terraform-aws-audit-member/blob/master/LICENSE)
 
 <!--- BEGIN_TF_DOCS --->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.20 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+| aws.account | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| email | Email to be used in services like Guardduty | `string` | n/a | yes |
+| guardduty | Enable/Disables guardduty | `bool` | `true` | no |
+| guardduty\_detector\_id | GuardDuty detector ID | `any` | n/a | yes |
+| master\_account\_id | Master account ID | `any` | n/a | yes |
+| name | Name of this account | `string` | n/a | yes |
+
+## Outputs
+
+No output.
+
 <!--- END_TF_DOCS --->
 
 ## Author
