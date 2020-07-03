@@ -12,6 +12,10 @@ resource "aws_guardduty_member" "member" {
   email                      = var.email
   invite                     = true
   disable_email_notification = true
+
+  lifecycle {
+    ignore_changes = [email]
+  }
 }
 
 resource "aws_guardduty_invite_accepter" "member" {
