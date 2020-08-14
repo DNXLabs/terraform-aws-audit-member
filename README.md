@@ -3,6 +3,14 @@
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-audit-member/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-audit-member/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-audit-member)](https://github.com/DNXLabs/terraform-aws-audit-member/blob/master/LICENSE)
 
+This terraform module enables guardduty for a member account.
+
+In addition you have the options to:
+
+ - Enable or Disable guardduty.
+ - Set an email to be used in services like guardduty
+ - Create a read-only role for accessing audit account
+
 <!--- BEGIN_TF_DOCS --->
 
 ## Requirements
